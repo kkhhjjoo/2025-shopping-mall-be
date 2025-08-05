@@ -19,6 +19,7 @@ userSchema.methods.toJSON = function () {
   delete obj.__v;
   delete obj.updatedAt;
   delete obj.createdAt;
+  return obj; // 반드시 반환!
 };
 
 userSchema.methods.generateToken = async function () {
